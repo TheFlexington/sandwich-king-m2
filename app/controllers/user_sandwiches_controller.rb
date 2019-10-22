@@ -1,0 +1,2 @@
+class UserSandwichesController < ApplicationController
+end
