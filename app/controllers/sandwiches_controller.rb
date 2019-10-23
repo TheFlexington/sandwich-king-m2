@@ -16,6 +16,10 @@ class SandwichesController < ApplicationController
     end
 
     def create
+        #stopped here, need to get user working 10/13, 7:30pm
+        @sandwich = Sandwich.create(sandwich_params)
+
+        redirect_to @sandwich
         # @sandwich = Sandwich.create(name: )
 
 
@@ -27,8 +31,8 @@ class SandwichesController < ApplicationController
 
     private
 
-    # def params
-
-    # end
+    def sandwich_params
+        params.require(:user).permit(:name, :biscuit_id, :topping_id, :ice_cream_id,)
+    end
 
 end

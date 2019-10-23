@@ -1,9 +1,11 @@
 <h1> Make a Sandwich </h1>
 
 <%= form_for @sandwich do |f| %>
-  Cookie: <%= f.collection_select(:biscuits, @biscuits, :id, :name)  %><br>
-  Ice Cream: <%= f.collection_select(:ice_creams, @ice_creams, :id, :name)  %><br>
-  Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
+  Choose Your Cookie: <%= f.collection_select(:biscuits, @biscuits, :id, :name)  %><br>
+  Choose Your Ice Cream: <%= f.collection_select(:ice_creams, @ice_creams, :id, :name)  %><br>
+  Choose Your Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
+  Name Your Sandwich! <%= f.label :name %>
+                      <%= f.text_field :name %><br>
 
     <%= f.submit %>
 

@@ -37,15 +37,15 @@
 # IceCream.create(name: "Chocolate")
 # IceCream.create(name: "Neopolitan")
 
-puts "making cookies aka biscuits"
-Biscuit.create(name: "Peanut Butter")
-Biscuit.create(name: "Chocolate Chip")
-Biscuit.create(name: "Oatmeal")
-Biscuit.create(name: "Lemon")
-Biscuit.create(name: "Snickerdoodle")
-Biscuit.create(name: "Fudge")
+# puts "making cookies aka biscuits"
+# Biscuit.create(name: "Peanut Butter")
+# Biscuit.create(name: "Chocolate Chip")
+# Biscuit.create(name: "Oatmeal")
+# Biscuit.create(name: "Lemon")
+# Biscuit.create(name: "Snickerdoodle")
+# Biscuit.create(name: "Fudge")
 
-puts "making toppings"
+# puts "making toppings"
 # Topping.create(name: "Sprinkles")
 # Topping.create(name: "Chocolate Syrup")
 # Topping.create(name: "M & Ms")
