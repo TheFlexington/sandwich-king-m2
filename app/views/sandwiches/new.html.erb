@@ -1,0 +1,12 @@
+<h1> Make a Sandwich </h1>
+
+<%= form_for @sandwich do |f| %>
+  Cookie: <%= f.collection_select(:ingredients, @cookies, :id, :name)  %><br>
+  Ice Cream: <%= f.collection_select(:ingredients, @ice_creams, :id, :name)  %><br>
+  Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
+
+    <%= f.submit %>
+
+<% end  %>
+
+
