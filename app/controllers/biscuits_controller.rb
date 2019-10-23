@@ -1,0 +1,2 @@
+class BiscuitsController < ApplicationController
+end
