@@ -8,8 +8,25 @@ class SandwichesController < ApplicationController
         @sandwich = Sandwich.find(params[:id])
     end
 
-    # def 
-        
+    def new 
+        @cookies = Ingredient.all_cookies
+        @toppings = Topping.all
+        @ice_creams = Ingredient.all_ice_creams
+        @sandwich = Sandwich.new
+    end
+
+    def create
+        @sandwich = Sandwich.create(name: "something")
+        ingredient_ids = params[:ingredients] 
+        ingredient_ids.each do |id|
+         @sandwich.sandwich_ingredients.create(ingredient_id: id)
+        end
+    end
+
+    private
+
+    # def params
+
     # end
 
 end

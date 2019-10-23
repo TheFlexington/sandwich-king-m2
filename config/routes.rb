@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :ice_creams
+  resources :toppings
   resources :ingredients
   resources :sandwich_ingredients
   get 'users/main_menu', to: 'users#main_menu'
