@@ -10,6 +10,13 @@ User.destroy_all
 puts 'Destroyed Users'
 Sandwich.destroy_all
 puts 'Destroyed sandwiches'
+Ingredient.destroy_all
+puts 'Destroyed ingredients'
+Topping.destroy_all
+puts 'Destroyed toppings'
+IceCream.destroy_all
+puts "destroyed ice creams"
+
 
 User.create(user_name: Faker::Name.name)
 User.create(user_name: Faker::Name.name)
@@ -22,27 +29,25 @@ Sandwich.create(name: "Choco Taco", price: 3.99)
 Sandwich.create(name: "Nutty Nugent", price: 5.99)
 Sandwich.create(name: "Pelvis Elvis", price: 6.66)
 
-# puts "making user sammies"
-# UserSandwich.create(user_id: 2, sandwich_id: 1)
-# UserSandwich.create(user_id: 3, sandwich_id: 2)
-# UserSandwich.create(user_id: 4, sandwich_id: 3)
-# UserSandwich.create(user_id: 5, sandwich_id: 4)
+puts "making Ice Creams"
+IceCream.create(name: "Vanilla")
+IceCream.create(name: "Mint Chip ")
+IceCream.create(name: "Peanut Butter")
+IceCream.create(name: "Cookie Dough")
+IceCream.create(name: "Chocolate")
+IceCream.create(name: "Neopolitan")
 
-puts "making ingredients"
-Ingredient.create(name: "Vanilla", component: "ice cream")
-Ingredient.create(name: "Mint Chip ", component: "ice cream")
-Ingredient.create(name: "Peanut Butter", component: "ice cream")
-Ingredient.create(name: "Cookie Dough", component: "ice cream")
-Ingredient.create(name: "Chocolate", component: "ice cream")
-Ingredient.create(name: "Neopolitan", component: "ice cream")
-Ingredient.create(name: "Peanut Butter", component: "cookie")
-Ingredient.create(name: "Chocolate Chip", component: "cookie")
-Ingredient.create(name: "Oatmeal", component: "cookie")
-Ingredient.create(name: "Lemon", component: "cookie")
-Ingredient.create(name: "Snickerdoodle", component: "cookie")
-Ingredient.create(name: "Fudge", component: "cookie")
-Ingredient.create(name: "Sprinkles", component: "toppings")
-Ingredient.create(name: "Chocolate Syrup", component: "toppings")
-Ingredient.create(name: "M & Ms", component: "toppings")
-Ingredient.create(name: "Gummi Bears", component: "toppings")
-Ingredient.create(name: "Coconut", component: "toppings")
+# puts "making cookies"
+# Ingredient.create(name: "Peanut Butter", component: "cookie")
+# Ingredient.create(name: "Chocolate Chip", component: "cookie")
+# Ingredient.create(name: "Oatmeal", component: "cookie")
+# Ingredient.create(name: "Lemon", component: "cookie")
+# Ingredient.create(name: "Snickerdoodle", component: "cookie")
+# Ingredient.create(name: "Fudge", component: "cookie")
+
+puts "making toppings"
+Topping.create(name: "Sprinkles")
+Topping.create(name: "Chocolate Syrup")
+Topping.create(name: "M & Ms")
+Topping.create(name: "Gummi Bears")
+Topping.create(name: "Coconut")

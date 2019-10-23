@@ -11,7 +11,7 @@ class SandwichesController < ApplicationController
     def new 
         @cookies = Ingredient.all_cookies
         @toppings = Topping.all
-        @ice_creams = Ingredient.all_ice_creams
+        @ice_creams = IceCream.all
         @sandwich = Sandwich.new
     end
 
