@@ -9,18 +9,20 @@ class SandwichesController < ApplicationController
     end
 
     def new 
-        @cookies = Ingredient.all_cookies
+        @biscuits = Biscuit.all
         @toppings = Topping.all
         @ice_creams = IceCream.all
         @sandwich = Sandwich.new
     end
 
     def create
-        @sandwich = Sandwich.create(name: "something")
-        ingredient_ids = params[:ingredients] 
-        ingredient_ids.each do |id|
-         @sandwich.sandwich_ingredients.create(ingredient_id: id)
-        end
+        # @sandwich = Sandwich.create(name: )
+
+
+        # ingredient_ids = params[:ingredients] 
+        # ingredient_ids.each do |id|
+        #  @sandwich.sandwich_ingredients.create(ingredient_id: id)
+        
     end
 
     private
