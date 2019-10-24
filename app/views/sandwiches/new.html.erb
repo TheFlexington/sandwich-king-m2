@@ -7,7 +7,7 @@
     <%= f.label :Name_Your_Sandwich %>
     <%= f.text_field :name %><br>
 
-        <%= f.label :Price %>
+    <%= f.label :Price %>
     <%= f.number_field :price %><br>
  
         Choose Your Cookie: <%= f.collection_select(:cookies, @cookies, :id, :name)  %><br>
