@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'users/main_menu', to: 'users#main_menu'
+  get 'users/welcome', to: 'users#welcome'
+  
+  
+  
+  
+  resources :cookies
   resources :biscuits
   resources :ice_creams
   resources :toppings
   resources :ingredients
   resources :sandwich_ingredients
-  
-  get 'users/main_menu', to: 'users#main_menu'
-
-  get 'users/welcome', to: 'users#welcome'
-
-
   resources :sandwiches
   resources :users
   resources :user_sandwiches
