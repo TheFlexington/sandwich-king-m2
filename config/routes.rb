@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   
   
   resources :cookies
-  resources :biscuits
   resources :ice_creams
   resources :toppings
   resources :ingredients

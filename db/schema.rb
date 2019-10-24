@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_030954) do
-
-  create_table "biscuits", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2019_10_24_154213) do
 
   create_table "cookies", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -25,9 +19,9 @@ ActiveRecord::Schema.define(version: 2019_10_24_030954) do
   end
 
   create_table "ice_creams", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -38,16 +32,12 @@ ActiveRecord::Schema.define(version: 2019_10_24_030954) do
   end
 
   create_table "sandwich_ingredients", force: :cascade do |t|
-    t.integer "sandwich_id", null: false
-    t.integer "ingredient_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "topping_id"
+    t.integer "sandwich_id"
     t.integer "cookie_id"
     t.integer "ice_cream_id"
-    t.integer "biscuit_id"
-    t.index ["ingredient_id"], name: "index_sandwich_ingredients_on_ingredient_id"
-    t.index ["sandwich_id"], name: "index_sandwich_ingredients_on_sandwich_id"
+    t.integer "topping_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sandwiches", force: :cascade do |t|
@@ -79,8 +69,6 @@ ActiveRecord::Schema.define(version: 2019_10_24_030954) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "sandwich_ingredients", "ingredients"
-  add_foreign_key "sandwich_ingredients", "sandwiches"
   add_foreign_key "user_sandwiches", "sandwiches"
   add_foreign_key "user_sandwiches", "users"
 end
