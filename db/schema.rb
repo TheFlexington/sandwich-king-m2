@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_223653) do
+ActiveRecord::Schema.define(version: 2019_10_24_030954) do
 
   create_table "biscuits", force: :cascade do |t|
     t.string "name"
@@ -18,10 +18,16 @@ ActiveRecord::Schema.define(version: 2019_10_23_223653) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "ice_creams", force: :cascade do |t|
-    t.string "name"
+  create_table "cookies", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+  end
+
+  create_table "ice_creams", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -37,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_10_23_223653) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "topping_id"
+    t.integer "cookie_id"
     t.integer "ice_cream_id"
     t.integer "biscuit_id"
     t.index ["ingredient_id"], name: "index_sandwich_ingredients_on_ingredient_id"
