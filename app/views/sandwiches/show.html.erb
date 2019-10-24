@@ -1,7 +1,9 @@
 <h1> Sandwich Show Page </h1>
 
 <h2> <%= @sandwich.name %> </h2>
-<h2> <%= @sandwich.price %> </h2>
-<h2> <%= @sandwich.cookiesname %> </h2>
+<h2> Price: <%= @sandwich.price %> </h2>
+<h2> Cookie:<%= @sandwich.cookies[0][:name] %> </h2>
+<h2> Cookie:<%= @sandwich.ice_creams[0][:name] %> </h2>
+<h2> Cookie:<%= @sandwich.toppings[0][:name] %> </h2>
 
 
