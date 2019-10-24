@@ -18,7 +18,12 @@ class SandwichesController < ApplicationController
     def create
         byebug
         #stopped here, need to get user working 10/13, 7:30pm
-        @sandwich = Sandwich.create(sandwich_params)
+        @sandwich = Sandwich.create(name: params[:name], price: params[:price])
+        @cookie = Cookie.find(id: params[:cookies])
+        @topping = Topping.find(id: params[:toppings])
+        @ice_cream = IceCream.find(id: params[:ice_creams])
+        @sandwich_ingredient = SandwichIngredient.create(sandwich_id: @sandwich.id, cookie_id: @cookie.id, ice_cream: @ice_cream.id, topping_id: @topping.id,)
+       
         if @sandwich.save
             redirect_to sandwich_path(@sandwich)
         else
@@ -35,7 +40,11 @@ class SandwichesController < ApplicationController
     private
 
     def sandwich_params
-        params.require(:sandwich).permit(:name, :cookie_id, :topping_id, :ice_cream_id)
+        params.require(:sandwich).permit(:name, :price, :cookies, :ice_creams, :toppings )
     end
+
+    # def sandwich_ingredient_params
+    #     params.require(:sandwich).permit(:sandwich_id, )
+    # end
 
 end

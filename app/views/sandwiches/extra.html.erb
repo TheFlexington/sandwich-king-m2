@@ -1,0 +1,10 @@
+<%= form_for @sandwich do |f| %>
+  Choose Your Cookie: <%= f.collection_select(:cookies, @cookies, :id, :name)  %><br>
+  Choose Your Ice Cream: <%= f.collection_select(:ice_creams, @ice_creams, :id, :name)  %><br>
+  Choose Your Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
+  Name Your Sandwich! <%= f.text_field :name %> <br>
+  <%# <%= f.text_field :name %><br> %>
+
+<%= f.submit %>
+
+<% end  %>

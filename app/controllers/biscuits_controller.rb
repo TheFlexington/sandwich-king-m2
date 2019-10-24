@@ -1,2 +1,0 @@
-class BiscuitsController < ApplicationController
-end
