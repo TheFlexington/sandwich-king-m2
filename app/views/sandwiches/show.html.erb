@@ -6,4 +6,6 @@
 <h3> Topping: <%= @topping.name %> </h3>
 <h3> Ice Cream: <%= @ice_cream.name %> </h3>
 
-<%= button_to "delete", @sandwich, :method => :delete %>
+<%= button_to "Delete", @sandwich, :method => :delete;  %> 
+<%= button_to "Edit", edit_sandwich_path(@sandwich), :method => :get %>
+<%# link_to "Edit", edit_sandwich_path(@sandwich) %>
