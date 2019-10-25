@@ -51,17 +51,21 @@ class SandwichesController < ApplicationController
         @topping = Topping.find(params[:sandwich][:toppings])
         @ice_cream = IceCream.find(params[:sandwich][:ice_creams])
         
+        # @sandwich_ingredients = @sandwich.sandwich_ingredient
         @sandwich_ingredients = SandwichIngredient.find_by(:sandwich_id == @sandwich.id)
         @sandwich_ingredients.update(cookie_id: @cookie.id, ice_cream_id: @ice_cream.id, topping_id: @topping.id)
-       
+        # byebug
         @sandwich.update(sandwich_params)
-        
+       
+ 
         redirect_to sandwich_path(@sandwich)
     end
 
     def destroy
         @sandwich = Sandwich.find(params[:id])
+        @sandwich_ingredient = SandwichIngredient.find(@sandwich.sandwich_ingredient.id)
         @sandwich.destroy
+        @sandwich_ingredient.destroy
         redirect_to sandwiches_path
     end
 
