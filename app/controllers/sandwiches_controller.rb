@@ -6,6 +6,13 @@ class SandwichesController < ApplicationController
 
     def show
         @sandwich = Sandwich.find(params[:id])
+        
+        @sandwich_ingredients = SandwichIngredient.find_by(:sandwich_id == @sandwich.id)
+
+        @cookie = Cookie.find{|cookie| @sandwich_ingredients.cookie_id == cookie.id}
+        @topping = Topping.find{|topping| @sandwich_ingredients.topping_id == topping.id}
+        @ice_cream = IceCream.find{|ice| @sandwich_ingredients.ice_cream_id == ice.id}
+        
     end
 
     def new 
@@ -39,21 +46,18 @@ class SandwichesController < ApplicationController
     end
     
     def update
-        byebug
         @sandwich = Sandwich.find(params[:id])
-        # byebug
-        # @sandwich.update(name: params[:sandwich][:name], price: params[:sandwich][:price], cookies: params[:sandwich][:cookies], toppings: params[:sandwich][:toppings], ice_creams: params[:sandwich][:ice_creams])
         @cookie = Cookie.find(params[:sandwich][:cookies])
         @topping = Topping.find(params[:sandwich][:toppings])
         @ice_cream = IceCream.find(params[:sandwich][:ice_creams])
         
-        @sandwich_ingredient = @sandwich.sandwich_ingredient
-        @sandwich_ingredient.update(....)
-        
-        @sandwich_ingredient = SandwichIngredient.update(sandwich_id: @sandwich.id, cookie_id: @cookie.id, ice_cream_id: @ice_cream.id, topping_id: @topping.id)
+        @sandwich_ingredients = @sandwich.sandwich_ingredient
+        @sandwich_ingredients = SandwichIngredient.update(sandwich_id: @sandwich.id, cookie_id: @cookie.id, ice_cream_id: @ice_cream.id, topping_id: @topping.id)
+       
         @sandwich = Sandwich.update(sandwich_params)
- #  if @sandwich_ingredient.update
-        redirect_to sandwich_path(@sandwich)
+        #  if @sandwich_ingredients.update
+ 
+            redirect_to sandwich_path(@sandwich)
         # else
         #     redirect_to new_sandwiches_path
         # end
@@ -64,7 +68,7 @@ class SandwichesController < ApplicationController
     private
 
     def sandwich_params
-        params.require(:sandwich).permit(:name, :price, :toppings, :ice_creams, :cookies)
+        params.require(:sandwich).permit(:name, :price)
     end
 
     # def sandwich_ingredient_params
