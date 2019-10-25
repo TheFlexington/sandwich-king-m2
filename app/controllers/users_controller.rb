@@ -16,6 +16,7 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.save
             redirect_to sandwiches_path
+
         else
             render :new
         end
