@@ -7,12 +7,11 @@
     <%= f.label :Price %>
     <%= f.number_field :price %><br>
  
-        Choose Your Cookie: <%= f.collection_select(:cookies, @cookies, :id, :name)  %><br>
+Choose Your Cookie: <%= f.collection_select(:cookies, @cookies, :id, :name)  %><br>
 
-        Choose Your Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
+Choose Your Topping: <%= f.collection_select(:toppings, @toppings, :id, :name)  %><br>
 
-        Choose Your Ice Cream: <%= f.collection_select(:ice_creams, @ice_creams, :id, :name)  %><br>
-
+Choose Your Ice Cream: <%= f.collection_select(:ice_creams, @ice_creams, :id, :name)  %><br>
 
 <%= f.submit %>
 
