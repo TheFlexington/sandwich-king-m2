@@ -1,5 +1,9 @@
-<h1> Sandwich Index Page </h1>
+<h1> Mmm Sandwiches </h1>
 
 <% @sandwiches.each do |sandwich| %>
-<h2><%= link_to sandwich.name, sandwich_path(sandwich) %></h2><br>
+<h3><%= link_to sandwich.name, sandwich_path(sandwich) %></h3><br>
 <% end %>
+
+<%= button_to "Create a New Sandwich", new_sandwich_path, :method => :get %>
+
+
