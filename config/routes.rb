@@ -6,10 +6,9 @@ Rails.application.routes.draw do
   
   
   
-  resources :cookies
-  resources :ice_creams
-  resources :toppings
-  resources :ingredients
+  resources :cookies, only: [:new, :create]
+  resources :ice_creams, only: [:new, :create]
+  resources :toppings, only: [:new, :create]
   resources :sandwich_ingredients
   resources :sandwiches
   resources :users
