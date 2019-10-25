@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2019_10_24_154213) do
   end
 
   create_table "ice_creams", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "ingredients", force: :cascade do |t|

@@ -63,7 +63,11 @@ class SandwichesController < ApplicationController
         # end
     end
 
-
+    def destroy
+        @sandwich = Sandwich.find(params[:id])
+        @sandwich.destroy
+        redirect_to sandwiches_path
+    end
 
     private
 
