@@ -8,8 +8,11 @@
 
 # User.destroy_all
 # puts 'Destroyed Users'
-# Sandwich.destroy_all
-# puts 'Destroyed sandwiches'
+Sandwich.destroy_all
+puts 'Destroyed sandwiches'
+SandwichIngredient.destroy_all
+puts 'Destroyed joins'
+
 # Ingredient.destroy_all
 # puts 'Destroyed ingredients'
 # Topping.destroy_all
@@ -37,13 +40,13 @@
 # IceCream.create(name: "Chocolate")
 # IceCream.create(name: "Neopolitan")
 
-puts "making cookies"
-Cookie.create(name: "Peanut Butter")
-Cookie.create(name: "Chocolate Chip")
-Cookie.create(name: "Oatmeal")
-Cookie.create(name: "Lemon")
-Cookie.create(name: "Snickerdoodle")
-Cookie.create(name: "Fudge")
+# puts "making cookies"
+# Cookie.create(name: "Peanut Butter")
+# Cookie.create(name: "Chocolate Chip")
+# Cookie.create(name: "Oatmeal")
+# Cookie.create(name: "Lemon")
+# Cookie.create(name: "Snickerdoodle")
+# Cookie.create(name: "Fudge")
 
 # puts "making toppings"
 # Topping.create(name: "Sprinkles")
