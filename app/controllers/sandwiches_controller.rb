@@ -55,12 +55,8 @@ class SandwichesController < ApplicationController
         @sandwich_ingredients = SandwichIngredient.update(sandwich_id: @sandwich.id, cookie_id: @cookie.id, ice_cream_id: @ice_cream.id, topping_id: @topping.id)
        
         @sandwich = Sandwich.update(sandwich_params)
-        #  if @sandwich_ingredients.update
  
-            redirect_to sandwich_path(@sandwich)
-        # else
-        #     redirect_to new_sandwiches_path
-        # end
+        redirect_to sandwich_path(@sandwich)
     end
 
     def destroy
@@ -74,9 +70,5 @@ class SandwichesController < ApplicationController
     def sandwich_params
         params.require(:sandwich).permit(:name, :price)
     end
-
-    # def sandwich_ingredient_params
-    #     params.require(:sandwich).permit(:cookie_id, :topping_id, :ice_cream_id )
-    # end
 
 end
