@@ -8,10 +8,10 @@
 
 # User.destroy_all
 # puts 'Destroyed Users'
-Sandwich.destroy_all
-puts 'Destroyed sandwiches'
-SandwichIngredient.destroy_all
-puts 'Destroyed joins'
+# Sandwich.destroy_all
+# puts 'Destroyed sandwiches'
+# SandwichIngredient.destroy_all
+# puts 'Destroyed joins'
 
 # Ingredient.destroy_all
 # puts 'Destroyed ingredients'
@@ -21,10 +21,10 @@ puts 'Destroyed joins'
 # puts "destroyed ice creams"
 
 
-# User.create(user_name: Faker::Name.name)
-# User.create(user_name: Faker::Name.name)
-# User.create(user_name: Faker::Name.name)
-# User.create(user_name: Faker::Name.name)
+User.create(user_name: Faker::Name.name)
+User.create(user_name: Faker::Name.name)
+User.create(user_name: Faker::Name.name)
+User.create(user_name: Faker::Name.name)
 
 # puts "making sammies"
 # Sandwich.create(name: "Butter Bean", price: 8.01)
@@ -32,25 +32,25 @@ puts 'Destroyed joins'
 # Sandwich.create(name: "Nutty Nugent", price: 5.99)
 # Sandwich.create(name: "Pelvis Elvis", price: 6.66)
 
-# puts "making Ice Creams"
-# IceCream.create(name: "Vanilla")
-# IceCream.create(name: "Mint Chip ")
-# IceCream.create(name: "Peanut Butter")
-# IceCream.create(name: "Cookie Dough")
-# IceCream.create(name: "Chocolate")
-# IceCream.create(name: "Neopolitan")
+puts "making Ice Creams"
+IceCream.create(name: "Vanilla")
+IceCream.create(name: "Mint Chip ")
+IceCream.create(name: "Peanut Butter")
+IceCream.create(name: "Cookie Dough")
+IceCream.create(name: "Chocolate")
+IceCream.create(name: "Neopolitan")
 
-# puts "making cookies"
-# Cookie.create(name: "Peanut Butter")
-# Cookie.create(name: "Chocolate Chip")
-# Cookie.create(name: "Oatmeal")
-# Cookie.create(name: "Lemon")
-# Cookie.create(name: "Snickerdoodle")
-# Cookie.create(name: "Fudge")
+puts "making cookies"
+Cookie.create(name: "Peanut Butter")
+Cookie.create(name: "Chocolate Chip")
+Cookie.create(name: "Oatmeal")
+Cookie.create(name: "Lemon")
+Cookie.create(name: "Snickerdoodle")
+Cookie.create(name: "Fudge")
 
-# puts "making toppings"
-# Topping.create(name: "Sprinkles")
-# Topping.create(name: "Chocolate Syrup")
-# Topping.create(name: "M & Ms")
-# Topping.create(name: "Gummi Bears")
-# Topping.create(name: "Coconut")
+puts "making toppings"
+Topping.create(name: "Sprinkles")
+Topping.create(name: "Chocolate Syrup")
+Topping.create(name: "M & Ms")
+Topping.create(name: "Gummi Bears")
+Topping.create(name: "Coconut")
