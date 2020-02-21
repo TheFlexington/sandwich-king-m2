@@ -26,7 +26,7 @@ User.create(user_name: Faker::Name.name)
 User.create(user_name: Faker::Name.name)
 User.create(user_name: Faker::Name.name)
 
-# puts "making sammies"
+# puts "making sammies"    // not working because parameters are not included
 # Sandwich.create(name: "Butter Bean", price: 8.01)
 # Sandwich.create(name: "Choco Taco", price: 3.99)
 # Sandwich.create(name: "Nutty Nugent", price: 5.99)
